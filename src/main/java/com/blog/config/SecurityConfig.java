@@ -46,7 +46,7 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
 	protected void configure(HttpSecurity http) throws Exception {
 
 		http.csrf().disable().cors().disable().
-		authorizeHttpRequests().antMatchers("/api/v1/auth/login","/api/users","/api/client/addClient","/api/project/addProject","/api/provider/addProvider","/api/saveLocation","/api/saveEnrollment","/api/saveClientLicense","/api//updateClientLicense/{id}","/api/updateClientLocation/{id}","/api/insertClientCoi","/api/updateClientCoi/{id}","/api/insertProviderID","/api/updateProviderID/{id}","/api/insertProviderLocation","/api/updateProviderLocation/{id}","/api/insertproviderEnrollment","/api/updateProviderEnrollment/{id}","/api/insertProviderTraining","/api//updateProviderTraining/{id}","/api/saveproviderCOI")
+		authorizeHttpRequests().antMatchers("/api/v1/auth/login","/api/users","/api/client/addClient","/api/project/addProject","/api/provider/addProvider","/api/saveLocation","/api/saveEnrollment","/api/saveClientLicense","/api//updateClientLicense/{id}","/api/updateClientLocation/{id}","/api/insertClientCoi","/api/updateClientCoi/{id}","/api/insertProviderID","/api/updateProviderID/{id}","/api/insertProviderLocation","/api/updateProviderLocation/{id}","/api/insertproviderEnrollment","/api/updateProviderEnrollment/{id}","/api/insertProviderTraining","/api/updateProviderTraining/{id}","/api/saveproviderCOI")
 		//authorizeHttpRequests().antMatchers(HttpMethod.GET,"/api/v1/auth/login")
 		.permitAll()
 		
