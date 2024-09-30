@@ -2,6 +2,8 @@ package com.blog.service;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+
+import java.util.List;
 import java.util.Optional;
 
 import com.blog.entity.ProviderId;
@@ -42,6 +44,16 @@ public class ProviderIDServiceImpl implements ProviderIdService {
 	            throw new RuntimeException("Provider with ID " + id + " not found.");
 	        }
 	    }
+	@Override
+	public ProviderId getProviderIdById(Long id) {
+		// TODO Auto-generated method stub
+		return providerIdRepository.findById(id).orElse(null);
+	}
+	@Override
+	public List<ProviderId> getAlProviderIds() {
+		// TODO Auto-generated method stub
+		return providerIdRepository.findAll();
+	}
 	}
 	
 	

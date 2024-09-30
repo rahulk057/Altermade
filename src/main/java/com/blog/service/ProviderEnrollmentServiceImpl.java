@@ -5,6 +5,8 @@ import org.springframework.stereotype.Service;
 
 import com.blog.entity.ProviderEnrollment;
 import com.blog.repository.ProviderEnrollmentRepository;
+
+import java.util.List;
 import java.util.Optional;
 
 @Service
@@ -43,6 +45,16 @@ public class ProviderEnrollmentServiceImpl implements ProviderEnrollmentService 
         } else {
             throw new RuntimeException("Enrollment with id " + id + " not found.");
         }
+	}
+	@Override
+	public ProviderEnrollment getProviderEnrollmentById(Long id) {
+		// TODO Auto-generated method stub
+		return providerEnrollmentRepository.findById(id).orElse(null);
+	}
+	@Override
+	public List<ProviderEnrollment> getAllProviderEnrollments() {
+		// TODO Auto-generated method stub
+		return providerEnrollmentRepository.findAll();
 	}
 
 }

@@ -2,6 +2,8 @@ package com.blog.service;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+
+import java.util.List;
 import java.util.Optional;
 
 import com.blog.entity.ProviderLocation;
@@ -45,6 +47,18 @@ public class ProviderLocationServiceImpl implements ProviderLocationservice{
 	            throw new RuntimeException("ProviderLocation not found with id: " + id);
 	        }
 	    }
+
+	@Override
+	public ProviderLocation getProviderLocationById(Long id) {
+		// TODO Auto-generated method stub
+		return providerLocationRepository.findById(id).orElse(null);
+	}
+
+	@Override
+	public List<ProviderLocation> getAllProviderLocation() {
+		// TODO Auto-generated method stub
+		return providerLocationRepository.findAll();
+	}
 	}
 
 

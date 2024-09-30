@@ -5,6 +5,8 @@ import org.springframework.stereotype.Service;
 
 import com.blog.entity.ProviderTraining;
 import com.blog.repository.ProviderTrainingRepository;
+
+import java.util.List;
 import java.util.Optional;
 
 
@@ -49,6 +51,16 @@ public class ProviderTrainingServiceimpl implements ProviderTrainingService {
 	            throw new RuntimeException("ProviderTraining not found with id: " + id);
 	        }
 		
+	}
+	@Override
+	public ProviderTraining getProviderTrainingById(Long providerTrainingId) {
+		// TODO Auto-generated method stub
+		return providerTrainingRepository.findById(providerTrainingId).orElse(null);
+	}
+	@Override
+	public List<ProviderTraining> getAllProviderTraining() {
+		// TODO Auto-generated method stub
+		return providerTrainingRepository.findAll();
 	}
 
 }
