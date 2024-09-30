@@ -52,8 +52,8 @@ public class ProviderTrainingController {
         }
     }
     
-    @GetMapping("/getAllClient")
-    public ResponseEntity<List<ProviderTraining>> getAllClient() {
+    @GetMapping("/getAllproviderTraining")
+    public ResponseEntity<List<ProviderTraining>> getAllproviderTraining() {
         List<ProviderTraining> providerTrainings = providerTrainingService.getAllProviderTraining();
         return new ResponseEntity<>(providerTrainings, HttpStatus.OK);
     }
