@@ -10,7 +10,7 @@ import javax.persistence.Table;
 @Table(name="provider_location")
 public class ProviderLocation {
 	@Id
-	@GeneratedValue(strategy = GenerationType.AUTO)
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private long id;
 	 private String clientName;
 	    private String providerName;

@@ -10,7 +10,7 @@ import javax.persistence.Table;
 @Table(name="provider_id")
 public class ProviderId {
 	@Id
-	@GeneratedValue(strategy = GenerationType.AUTO)
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private long id;
 	private String providerName;
     private String licenseType;

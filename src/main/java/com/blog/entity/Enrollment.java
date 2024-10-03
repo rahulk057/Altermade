@@ -11,7 +11,7 @@ import javax.persistence.Table;
 public class Enrollment {
 
 	@Id
-	@GeneratedValue(strategy = GenerationType.AUTO)
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private long id;
 	private String clientName;
     private String payorName;

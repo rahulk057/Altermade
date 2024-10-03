@@ -11,7 +11,7 @@ import javax.persistence.Table;import net.bytebuddy.dynamic.loading.ClassReloadi
 public class ClientCOI {
 	
 	@Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
 	private long id;
 	
 	private String clientName;

@@ -17,7 +17,7 @@ import com.fasterxml.jackson.annotation.JsonManagedReference;
 public class Client {
 	
 	@Id
-	@GeneratedValue(strategy =GenerationType.AUTO )
+	@GeneratedValue(strategy =GenerationType.IDENTITY )
 	private int id ;
 	private String clientName; 
 	private String dba; 
