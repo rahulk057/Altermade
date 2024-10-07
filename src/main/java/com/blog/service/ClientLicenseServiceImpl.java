@@ -5,6 +5,8 @@ import org.springframework.stereotype.Service;
 
 import com.blog.entity.ClientLicense;
 import com.blog.repository.ClientLicenseRepository;
+
+import java.util.List;
 import java.util.Optional;
 
 
@@ -41,5 +43,15 @@ public class ClientLicenseServiceImpl implements ClientLicenseService {
             throw new RuntimeException("Client License not found with ID: " + id);
         }
 
+	}
+	@Override
+	public ClientLicense getClientLicenseByID(Long id) {
+		// TODO Auto-generated method stub
+		return clientLicenseRepository.getById(id);
+	}
+	@Override
+	public List<ClientLicense> getAllClientLicenses() {
+		// TODO Auto-generated method stub
+		return clientLicenseRepository.findAll();
 	}
 }

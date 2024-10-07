@@ -54,6 +54,12 @@ public class ProviderInformationServiceImpl implements ProviderInformationServic
 		// TODO Auto-generated method stub
 		return providerInformationRepository.findAll();
 	}
+
+	@Override
+	public ProviderInformation getProviderInformationById(Long id) {
+		// TODO Auto-generated method stub
+		return providerInformationRepository.getById(id);
+	}
 	
 
 }

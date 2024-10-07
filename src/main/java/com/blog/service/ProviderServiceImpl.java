@@ -133,4 +133,11 @@ public class ProviderServiceImpl  implements ProviderService{
 		  return providerRepository.findByStatus("Inactive");
 	}
 
+
+	@Override
+	public Provider getProviderById(Long Id) {
+		// TODO Auto-generated method stub
+		return providerRepository.getById(Id);
+	}
+
 }

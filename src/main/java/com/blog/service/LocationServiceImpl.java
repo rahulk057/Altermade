@@ -1,6 +1,7 @@
 package com.blog.service;
 
 
+import java.util.List;
 import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -47,6 +48,19 @@ public class LocationServiceImpl implements LocationService {
 	        throw new RuntimeException("Client Location not found with ID: " + id);
 	    }
 	}
+
+	@Override
+	public Location getLocationById(Long id) {
+		// TODO Auto-generated method stub
+		return locationRepository.getById(id);
+	}
+
+	@Override
+	public List<Location> getLocation() {
+		// TODO Auto-generated method stub
+		return locationRepository.findAll();
+	}
+
 }
 
 

@@ -9,6 +9,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.blog.entity.ProviderInformation;
+import com.blog.entity.ProviderLocation;
 import com.blog.service.ProviderInformationService;
 
 import org.springframework.web.bind.annotation.CrossOrigin;
@@ -43,4 +44,15 @@ public class providerInformationController {
 	        List<ProviderInformation> providerInformations = providerInformationService.getInformations();
 	        return new ResponseEntity<>(providerInformations, HttpStatus.OK);
 	    }
+	  
+	  @GetMapping("/providerInformation/{id}")
+	    public ResponseEntity<ProviderInformation> providerInformationByID(@PathVariable Long id) {
+		  ProviderInformation providerInformation = providerInformationService.getProviderInformationById(id);
+	        if (providerInformation != null) {
+	            return new ResponseEntity<>(providerInformation, HttpStatus.OK);
+	        } else {
+	            return new ResponseEntity<>(HttpStatus.NOT_FOUND);
+	        }
+	    }
+	  
 }

@@ -15,4 +15,5 @@ public interface ProviderService {
 	List<ProviderDto> getAllProvider();
 	List<Provider> getActiveProvider();
 	List<Provider> getInactiveProvider();
+	Provider getProviderById (Long Id);
 }

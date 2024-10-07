@@ -5,6 +5,8 @@ import org.springframework.stereotype.Service;
 
 import com.blog.entity.ClientCOI;
 import com.blog.repository.ClientCoiRepository;
+
+import java.util.List;
 import java.util.Optional;
 
 
@@ -53,6 +55,18 @@ public class ClientCoiServiceImpl implements ClientCoiService {
 	        throw new RuntimeException("Client Coi not found with ID: " + id);
         }
     
+	}
+
+	@Override
+	public ClientCOI getClientClientCoiById(Long id) {
+		// TODO Auto-generated method stub
+		return clientCoiRepository.getById(id);
+	}
+
+	@Override
+	public List<ClientCOI> getClientCOIs() {
+		// TODO Auto-generated method stub
+		return clientCoiRepository.findAll();
 	}
 
 }
